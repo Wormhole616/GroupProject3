@@ -1,0 +1,12 @@
+[
+  {
+    "paymentAmount": "10000000",
+    "paymentType": "Crypto",
+    "createdAt": "2021-06-22T11:23:21.000Z"
+  },
+  {
+    "paymentAmount": "20000000",
+    "paymentType": "Cash",
+    "createdAt": "2021-06-22T11:23:51.000Z"
+  }
+]

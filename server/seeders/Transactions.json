@@ -1,0 +1,18 @@
+[
+    {
+      "transaction": "purchase (sale)",
+      "quantitysold": "3000",
+      "transactionTotal": 106000,
+      "paymentType": "Cash",
+      "createdAt": "2020-07-20T17:35:41.330Z"
+    },
+    
+    {
+        "transaction": "purchase (sale)",
+        "quantitysold": "6000",
+        "transactionTotal": 1000000,
+        "paymentType": "Cash",
+        "createdAt": "2020-07-20T17:35:41.330Z"
+      }
+
+  ]
