@@ -23,6 +23,10 @@ export default function Dashboard() {
         return <AdminPage />
     }
 
+    if (!auth.loggedIn()) {
+        return <h1>Please login to access this page</h1>
+      }
+
     return (
         <div>
             <h1>Dashboard</h1>

@@ -47,7 +47,7 @@ const Header = () => {
                   <>
                     <li>
                       <Link className="navItem" to="/">
-                        User Portal
+                        Dashboard
                       </Link>
                     </li>
                     <li>
