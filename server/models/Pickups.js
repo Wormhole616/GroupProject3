@@ -5,7 +5,7 @@ const pickupsSchema = new Schema({
     Date: {
         type: Date,
         required: true,
-        default: Date.now,
+        // default: Date.now,
         // get: (timestamp) => dateFormat(timestamp),
     },
     Time: {

@@ -1,0 +1,17 @@
+[
+    {
+      "name": "testinguser",
+    "email": "test@test.com",
+    "password": "test12345",
+    "isAdmin": false
+    },
+    {
+      "name": "admin",
+    "email": "admin@admin.com",
+    "password": "admin12345",
+    "isAdmin": true
+
+      
+    }
+    
+]
