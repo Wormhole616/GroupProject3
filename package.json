@@ -1,5 +1,5 @@
 {
-  "name": "Client_Portal",
+  "name": "client-portal",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
