@@ -40,6 +40,15 @@ const userSchema = new Schema({
     }
   ],
 
+  prices: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Prices',
+    }
+  ],
+  
+
+
   documents: [
     {
       documentText: {

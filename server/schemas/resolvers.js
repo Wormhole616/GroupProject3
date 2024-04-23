@@ -1,6 +1,6 @@
 
 
-const { Payments, Pickups, Transactions, Users } = require('../models');
+const { Payments, Pickups, Transactions, Users, Prices } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -30,8 +30,16 @@ const resolvers = {
     },
     transaction: async (parent, { userId }) => {
       return Transactions.findOne({ _id: userId });
+
       
     },
+
+    prices: async () => {
+      return Prices.find();
+    },
+
+
+
     me: async (parent, args, context) => {
       console.log(context.user)
       if (context.user) {
@@ -86,6 +94,20 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    addPrices: async (parent, { serialNumber, makeAndModel, Notes},context) => {
+      if (context.user) {
+        const prices = await Prices.create({ serialNumber, makeAndModel, Notes, user: context.user._id});
+        await Users.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { prices: prices._id } }
+        );
+        return prices;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+
     addTransactions: async (parent, { transaction, quantitySold, transactionTotal, paymentType, Notes, user_id }) => {
       // if (context.user) {
         const newTransaction = await Transactions.create({ transaction, quantitySold, transactionTotal, paymentType, Notes, user: context.user._id });

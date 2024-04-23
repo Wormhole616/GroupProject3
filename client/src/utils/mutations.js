@@ -58,3 +58,14 @@ export const ADD_TRANSACTION = gql`
         }
     }
     `;
+export const ADD_PRICES = gql`
+    mutation addPrices($serialNumber: String!, $makeAndModel: String!, $Notes: String!) {
+        addPrices(serialNumber: $serialNumber, makeAndModel: $makeAndModel, Notes: $Notes) {
+        _id
+        serialNumber
+        makeAndModel
+        Notes
+        createdAt
+        }
+    }
+    `;

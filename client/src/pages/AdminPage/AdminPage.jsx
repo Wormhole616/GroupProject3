@@ -12,9 +12,11 @@ export default function AdminPage() {
     //   const pickupDate = new Date(pickup.Date);
     //   const currentDate = new Date();
 
-    console.log(pickup.Date)
-
-    return dayjs().isSameOrAfter(dayjs(pickup.Date))
+    console.log(parseInt(pickup.Date))
+    console.log(dayjs().unix()*1000)
+    
+    // return dayjs().isSameOrAfter(dayjs(pickup.Date))
+    return parseInt(pickup.Date) >= dayjs().unix()*1000
 
     // return pickupDate >= currentDate;
 
@@ -36,7 +38,8 @@ export default function AdminPage() {
         <div className="container">
           {upcomingPickups.map((pickup) => (
             <div key={pickup._id} >
-              <p>Date: {dayjs(pickup.Date).format("MMM/DD")}</p>
+              <p>Date: {dayjs.unix(parseInt(pickup.Date/1000)).format("MMM/DD/YYYY")}</p>
+              
               <p>Time: {pickup.Time}</p>
               <p>Location: {pickup.Location}</p>
               <p>Notes: {pickup.Notes}</p>
