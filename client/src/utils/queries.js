@@ -76,3 +76,20 @@ query QUERY_ALL_PICKUPS {
   }
 }
 `
+
+export const PRICES = gql`
+query QUERY_ALL_PRICES {
+  prices {
+    serialNumber
+    makeAndModel
+    Notes
+    _id
+    user {
+      _id
+      email
+      isAdmin
+      name
+    }
+  }
+}
+`

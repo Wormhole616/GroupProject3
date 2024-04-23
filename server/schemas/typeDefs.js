@@ -41,6 +41,15 @@ type Transactions {
   user: Users
 
 }
+type Prices {
+  _id: ID
+  serialNumber: String
+  makeAndModel: String
+  createdAt: String
+  user: Users
+  Notes: String
+}
+
 type Auth {
   token: ID!
   user: Users
@@ -54,6 +63,7 @@ type Query {
   pickup(pickupId: ID!): Pickups
   transactions: [Transactions]
   transaction(transactionId: ID!): Transactions
+  prices: [Prices]
   me: Users
 }
 type Mutation {
@@ -62,7 +72,7 @@ type Mutation {
   addPayments(paymentAmount: Float!, paymentType: String!): Payments
   addPickups(Date: String!, Time: String!, Location: String!, Notes: String!): Pickups
   addTransactions(transaction: String!, quantitySold: Int!, transactionTotal: Float!, paymentType: String!, user_id: ID!, Notes: String): Transactions
- 
+  addPrices(serialNumber: String!, makeAndModel: String!, Notes: String!): Prices
   removePayments(paymentId: ID!): Payments
   removePickups(pickupId: ID!): Pickups
   removeTransactions(transactionId: ID!): Transactions

@@ -7,6 +7,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import LoginPage from './pages/LoginPage/login.jsx';
 import Dashboard from './pages/Dashboard/Dashboard.jsx';
 import Pickup from './pages/Pickup/pickup.jsx';
+import Price from './pages/Price/price.jsx';
 
 import auth from './utils/auth.js';
 
@@ -27,10 +28,11 @@ const router = createBrowserRouter([
         path: '/pickup',
         element: <Pickup />
       }, 
-      // {
-      //   path: '/me',
-      //   element: <Profile />
-      // }, {
+      {
+        path: '/price',
+        element: <Price />
+      },
+      //  {
       //   path: '/thoughts/:thoughtId',
       //   element: <SingleThought />
       // }

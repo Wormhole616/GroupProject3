@@ -52,8 +52,14 @@ const Pickup = () => {
 
     // send the request/mutation
     await addPickup({
-      variables: { ...formData },
+      variables: {
+        Date: startDate,
+        Time: time,
+        Location: location,
+        Notes: notes
+      },
     });
+    window.location.reload();
 
   }
 
@@ -88,7 +94,8 @@ const Pickup = () => {
         (lastPickup?.Date) ?
           (
             <div>
-              <p>Date: {lastPickup.Date.toString()}</p>
+              
+              <p>Date: {dayjs.unix(parseInt(lastPickup.Date/1000)).format("MMM/DD/YYYY")}</p>
               <p>Time: {lastPickup.Time}</p>
               <p>Location: {lastPickup.Location}</p>
               <p>Notes: {lastPickup.Notes}</p>
