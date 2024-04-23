@@ -13,7 +13,7 @@ const Transactions = () => {
     return (
       <div className="container">
         <h1>Transactions</h1>
-        <p>You can Now view your transactions here!</p>
+        <p>You can view and access your transaction history</p>
 
       </div>
     )

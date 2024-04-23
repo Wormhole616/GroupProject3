@@ -98,7 +98,7 @@ const Pickup = () => {
           <p>Notes: {lastPickup.Notes}</p>
         </div>
       ) : (
-        <h1>No pickup requested</h1>
+        <h2>No pickup requested</h2>
       )}
     </div>
   );
