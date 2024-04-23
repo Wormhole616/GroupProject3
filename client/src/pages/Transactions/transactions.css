@@ -1,5 +1,13 @@
+:root {
+    --primary: #1290cb;
+    --secondary: #59b2dc;
+    --tertiary: #cfeaf5;
+    --greyfont: #898989;
+    --white: #fff;
+  }
 
-div {
+
+.container {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

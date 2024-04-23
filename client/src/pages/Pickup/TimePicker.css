@@ -6,7 +6,9 @@
   --white: #fff;
 }
 
-
+h2 {
+  font-size: medium;
+}
 
 form {
   border: 3px solid var(--tertiary);
