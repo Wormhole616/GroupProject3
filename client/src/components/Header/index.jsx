@@ -15,7 +15,7 @@ const Header = () => {
           <Link className="text-light" to="/">
             <h1 className="m-0">Client Portal</h1>
           </Link>
-          <p className="m-0">Get all your interactions with G&D Here.</p>
+          <p className="m-0">Get all of your interactions with <span>G&D Refiners</span> here</p>
         </div>
         <div className="menu">
 
