@@ -86,7 +86,7 @@ const loginPage = (props) => {
                       Cancel
                     </button>
                     <span className="password">
-                      Forgot <a href="#">password?</a>
+                      Trouble <a href="#">logging in?</a>
                     </span>
                   </div>
                 </form>
